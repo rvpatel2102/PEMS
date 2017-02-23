@@ -1,0 +1,17 @@
+<div ng-controller="tab_1" style="padding: 30px; background-color: whitesmoke">
+            <span class="title">TAB 1</span>
+            <br><br>
+            Filter : 
+            <select ng-model="selectbox" ng-click="func()">
+                <option value="">Show All</option>
+                <option value=".txt">Text</option>
+                <option value=".mp4">Videos</option>
+                <option value=".jpg">Photos</option>
+            </select>
+            
+            <p><i><b>Selected Filter dropdown Item : </b> <span>{{disptxt}}</span></i></p>
+            <ul>
+                <li ng-repeat="x in listofval | filter:ext">{{x}}</li>
+            </ul>
+            <br><br><br><br><br><br>
+        </div>
